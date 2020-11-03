@@ -1,0 +1,44 @@
+#wf-productInfo .info-content{
+    border-bottom: 12px solid #f0f0f0;
+    width:100%;
+    background-color: #f7f7f7;
+    padding: 30px 10%;
+}
+#wf-productInfo .info-content p{
+   margin: 0;
+}
+#wf-productInfo .info-content p:last-of-type{
+    font-size: 12px;
+    text-align: right;
+    color: gray;
+}
+#wf-productInfo .info-content #info-file{
+    text-align: right;
+ }
+#wf-productInfo .info-content #info-file span{
+    color: #fe9b00;
+    cursor: pointer;
+    margin: 0 5px;
+ }
+ #wf-productInfo .info-content #info-file span:last-of-type{
+    color: red;
+    cursor: auto;
+ }
+#wf-productInfo .info-photo{
+    background-image: url("../Image/point.jpg");
+    display: flex;
+    width: 100%;
+}
+#wf-productInfo .info-photo .info-photo-content{
+    width: 90%;
+    margin: auto;
+}
+#wf-productInfo .info-photo .info-photo-content .photo-li{
+    width: 31%;
+    margin: 1%;
+    float: left;
+    box-shadow: 0px 10px 40px -10px rgba(0,64,128,0.2);
+}
+#wf-productInfo .info-photo .info-photo-content .photo-li .card-title{
+    text-align: center;
+}

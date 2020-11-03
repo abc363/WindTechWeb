@@ -1,0 +1,122 @@
+ul{
+    padding: 0;
+}
+/* ***公司介绍*** */
+#wf-background{
+    width: 100%;
+    height: 380px;
+    background-image: url("../Image/companyBack.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+#wf-background .backShade{
+    width: 100%;
+    height: 380px;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.3;
+    background-color:black;
+}
+#wf-background .backText{
+    color: white;
+    z-index: 999;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 190px;
+    margin: auto;
+}
+#wf-background .backText>p:first-of-type{
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}
+#wf-background .backText>p:last-of-type{
+    margin: 0;
+    text-align: center;
+}
+#wf-background .backText .text-bottom{
+    width: 50%;
+    margin: auto;
+}
+#wf-background .backText .text-bottom .text-bottom-left{
+    width: 45%;
+    text-align: right;
+    float: left;
+    color: white;
+    font-size: 50px;
+    /* padding-right: 25px; */
+}
+#wf-background .backText .text-bottom .text-bottom-right{
+    width: 55%;
+    float: left;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+#wf-background .backText .text-bottom .text-bottom-right>p:last-of-type{
+    font-size: 14px;
+    margin: 0;
+}
+#wf-background .backText .text-bottom .text-bottom-right p:first-of-type{
+    margin: 0;
+}
+#wf-comIntro{
+    width: 100%;
+    background-image: url("../Image/point.jpg");
+    padding: 30px 10%;
+}
+#wf-comIntro .comIntro-header{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid gray;
+    margin: auto;
+}
+#wf-comIntro .comIntro-header div{
+    width: 50%;
+    text-align: center;
+}
+#wf-comIntro .comIntro-header button{
+    width: 50%;
+    background-color: #D3D3D3;
+    height: 40px;
+    border: none;
+    color: white;
+    border-bottom: 4px solid #A9A9A9;
+    font-weight: 600;
+}
+#wf-comIntro .container .col-md-7 img,#wf-comIntro .container .col-md-5 img{
+   width: 80%;
+   height: 80%;
+}
+#wf-comIntro #company-introduce .col-md-7 div,#wf-comIntro .container .col-md-5 div{
+    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 10px 40px -10px rgba(0,64,128,0.2);
+    margin: auto;
+ }
+ #wf-comIntro .container .col-md-5{
+     line-height: 30px;
+ }
+ #wf-comIntro .container{
+     margin: 28px 0;
+     display: none;
+}
+#wf-comIntro #company-faith .col-md-7 p{
+    margin: 0;
+}
+#wf-comIntro #company-faith .col-md-7 p strong{
+    letter-spacing: 1px;
+}
+#wf-comIntro #company-faith .col-md-7 .indent{
+    text-indent: 2em;
+}

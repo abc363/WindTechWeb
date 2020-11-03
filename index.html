@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佛山市微风科技有限公司</title>
+    <link rel="icon"href="Image/Logo.png"type="image/x-icon"/>
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Css/index.css"/>
+    <link rel="stylesheet" href="Css/header.css"/>
+    <link rel="stylesheet" href="Css/footer.css"/>
+</head>
+<body>
+  <!-- 导航栏header -->
+  <header id="wf-header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light wf-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="Image/Logo.png"/>
+          <strong>微风科技</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">产品中心</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                关于微风
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" onclick="jump('company',2)">公司介绍</a>
+                <a class="dropdown-item" onclick="jump('company',2)">企业文化</a>
+                </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">联系我们</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <img src="Image/map.png"/><span>广东佛山</span>
+            <img src="Image/tel.png"/><span>18100214480</span>
+          </span>
+        </div>
+    </div>
+    </nav>
+  </header>
+  <!-- 轮播图 -->
+  <section id="wf-carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Image/slider1.jpg">
+        </div>
+        <div class="carousel-item">
+          <img src="Image/slider2.jpg">
+        </div>
+        <div class="carousel-item">
+          <img src="Image/slider3.jpg">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </a>
+    </div>
+  </section>
+  <!-- 公司介绍 -->
+  <section id="wf-introduce">
+    <div class="introduce-wrap">
+      <p>——————————————<strong>ABOUT&nbsp;&nbsp;&nbsp;关于微风</strong>——————————————</p>
+      <p>微风科技，专注于生产优秀的工控物联网产品。</p>
+    </div>
+    <div class="introduce-content" data-animate="bounceIn" data-duration="1.0s" data-delay="0.6s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="wf-company" class="carousel slide carousel-fade" data-ride="carousel">
+              <div class="ecarousel-innr">
+                <div class="carousel-item active">
+                  <img src="Image/company.jpg" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <span>01 / 03</span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="Image/core_left.jpg" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <span>02 / 03</span>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="Image/bus_system.png" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block">
+                    <span>03 / 03</span>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 text">
+            <p><strong>公司介绍</strong></p>
+            <p><strong><span class="title_span">INTRODUCTION __</span></strong></p>
+            <p>佛山市微风科技有限公司是一家实力雄厚、发展潜力巨大的物联网科技的高新技术企业。
+              主要经营业务有工控电子产品的自研、零售、批发；电子元件及组件制造；半导体分立器件制造；集成电路设计与制造。<br>公司有多项专利和知识产权，并具有自研的物联网实时操作系统。 专家团队有10年的工控电子行业经验，致力于为客户提供可靠、安全、高效的工控电子产品。
+              <br>公司主要成员参与国家重点研发计划“物联网与智慧城市关键技术及示范”重点专项的研发…… <strong onclick="toMore('company')">了解更多>></strong></p>
+            <div class="btn-bottom">
+              <a class="carousel-control-prev" href="#wf-company" data-slide="prev">
+                <button><</button>
+              </a>
+              <a class="carousel-control-next" href="#wf-company" data-slide="next">
+                <button>></button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 主要业务 -->
+  <section id="wf-business">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+        </div>
+        <div class="col-md-5">
+          <div class="image-hover"><img src="Image/business.jpg"/></div>
+        </div>
+      </div>
+    </div>
+    <div class="business-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <p><span class="business_span">公司业务 BUSINESS</span></p>
+            <span>工控电子产品的自研、零售、批发</span><button onclick="toMore('product')">查看产品</button>
+            <p>主营以专用集成电路为核心的MODBUS-485继电器模块、工业延时模块、传感器模组以及可编程网关模组。系列产品经济可靠、准确度高，具有极高的性价比。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 产品优势 -->
+  <section id="wf-product">
+    <div class="introduce-wrap">
+      <p>——————————————<strong>PRODUCT&nbsp;&nbsp;&nbsp;产品优势</strong>——————————————</p>
+      <p>微风科技为您提供多种灵活的物联网方案服务</p>
+      <p>适用于各大行业的应用场景</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="product-item">
+            <div class="circle-div">
+              <div class="circle" id="logo_intro0">
+                <img src="Image/econmony.png" id="logo_image0"/>
+              </div>
+            </div>
+            <div class="text-wrap">
+              <p><strong>高经济性</strong></p>
+              <div id="product-line1"></div>
+              <p>高硬件利用率</p>
+              <p>低成本实现功能</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="product-item">
+          <div class="circle-div">
+            <div class="circle" id="logo_intro1">
+              <img src="Image/independent.png" id="logo_image1"/>
+            </div>
+          </div>
+          <div class="text-wrap">
+            <p><strong>高可靠性</strong></p>
+            <div id="product-line2"></div>
+            <p>电路设计严格符合安全规定</p>
+            <p>通过极限测试</p>
+            <p>输入端和通信端口防反接和浪涌保护</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-item">
+          <div class="circle-div">
+            <div class="circle" id="logo_intro2">
+              <img src="Image/flexible.png" id="logo_image2"/>
+            </div>
+          </div>
+          <div class="text-wrap">
+            <p><strong>高灵活性</strong></p>
+            <div id="product-line3"></div>
+            <p>通用设计</p>
+            <p>可编程可定制</p>
+            <p>产品抽象模块化</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="product-item">
+          <div class="circle-div">
+            <div class="circle" id="logo_intro3">
+              <img src="Image/experience.png" id="logo_image3"/>
+            </div>
+          </div>
+          <div class="text-wrap">
+            <p><strong>行业经验</strong></p>
+            <div id="product-line4"></div>
+            <p>企业级应用标准</p>
+            <p>行业专家团队</p>
+            <p>专业化产品团队</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 合作伙伴 -->
+  <section id="wf-partner">
+    <p class="partner-title">—————————————<strong>PARTNER&nbsp;&nbsp;&nbsp;合作伙伴</strong>—————————————</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="Image/aliyun.png"/>
+          <p>阿里云计算有限公司</p>
+        </div>
+        <div class="col-md-3">
+          <img src="Image/guoxingguandian.png"/>
+          <p>佛山市国星光电股份有限公司</p>
+        </div>
+        <div class="col-md-3">
+          <img src="Image/anxun.png"/>
+          <p>佛山市安讯科技智能有限公司</p>
+        </div>
+        <div class="col-md-3">
+          <img src="Image/mingcheng.png"/>
+          <p>深圳市明成智能数据设备有限公司</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--联系我们-->
+  <section id="wf-contact" onclick="toMore('contact')">
+		<div id="right_fixed_box">
+			<img src="Image/telephone.png"/>
+			<div class="right_fixed_div">
+				<p>联</p><p>系</p><p>我</p><p>们</p>	
+			</div>
+		</div>
+  </section>
+  <!-- 页脚 -->
+  <footer id="wf-footer">
+    <div class="footer-up">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>联系我们</h5>
+            <small>Consulting Service</small>
+          </div>
+          <div class="col-md-8">
+            <p>地址：广东省佛山市禅城区华宝南路13号国家火炬创新创业园E座5楼511</p>
+            <p>电话：18100214480</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">版权所有 - @2020 佛山市微风科技有限公司</div>
+  </footer>
+  <noscript>
+    <p>本页面需要浏览器支持（启用）脚本JavaScript。</p>
+  </noscript>
+  <script src="JS/jquery-1.11.0.min.js"></script>
+  <script src="BootStrap/js/bootstrap.min.js"></script>
+  <script src="JS/jump.js"></script>
+  <script src="JS/index.js"></script>
+</body>
+</html>
