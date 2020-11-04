@@ -1,7 +1,7 @@
 /* ***背景图*** */
 #wf-background{
     width: 100%;
-    height: 380px;
+    height: 8rem;
     background-image: url("../Image/mapBackground.PNG");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -9,7 +9,7 @@
 }
 #wf-background .backShade{
     width: 100%;
-    height: 380px;
+    height: 8rem;
     position: absolute;
     bottom: 0;
     opacity: 0.8;
@@ -29,14 +29,14 @@
     text-align: center;
 }
 #wf-background .backText p:first-of-type{
-    font-size: 50px;
+    font-size: 1rem;
     margin: 0;
 }
 #wf-background .backText:nth-child(2){
     font-size: 14px;
 }
 #wf-background .backText>p:last-of-type{
-    font-size: 30px;
+    font-size: 0.6rem;
 }
 /* ***介绍*** */
 #wf-introTitle{
@@ -61,7 +61,7 @@
     text-align: center;
     font-weight: 600;
     margin: 0;
-    font-size: 30px;
+    font-size: .6rem;
 }
 /* ***地址*** */
 #wf-map{
@@ -86,17 +86,15 @@
 #wf-map .map-content .row-wrap{
     width: 100%;
     margin: auto;
-    height: 45px;
-    line-height: 45px;
     display: flex;
     margin: 10px;
 }
 #wf-map .map-content .title-col{
-   width: 18%;
    background-color: black;
    color: white;
    font-weight: 600;
    letter-spacing: 1px;
+   padding: 0 .1rem;
    opacity: 0.7;
    height: 40px;
    border-bottom: 2px solid black;
@@ -122,9 +120,9 @@
     order: 2;
     background-color: hsl(37, 100%, 50%);
     flex-grow: 1;
+    padding: 10px;
     font-size: 15px;
     border-bottom: 2px solid #f17531;
-    padding-left: 1%;
 }
 #wf-map .map-content .second-col span{
     cursor: pointer;

@@ -1,5 +1,5 @@
 #wf-productInfo .info-content{
-    border-bottom: 12px solid #f0f0f0;
+    border-bottom: .15rem solid #f0f0f0;
     width:100%;
     background-color: #f7f7f7;
     padding: 30px 10%;
@@ -8,9 +8,22 @@
    margin: 0;
 }
 #wf-productInfo .info-content p:last-of-type{
-    font-size: 12px;
+    font-size: .2rem;
     text-align: right;
     color: gray;
+}
+#wf-productInfo #info-title{
+    font-size: .35rem;
+    font-weight: 600;
+ }
+ #wf-productInfo .info-intro{
+     font-size: .3rem;
+ }
+ #wf-productInfo .info-photo .info-photo-content .photo-li .card-title{
+    margin: .4rem 0;
+}
+#wf-productInfo .info-photo .info-photo-content .photo-li .card-body{
+    padding: 0;
 }
 #wf-productInfo .info-content #info-file{
     text-align: right;

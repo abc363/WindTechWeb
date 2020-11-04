@@ -81,6 +81,7 @@ ul li{
     left: 0;
     position: absolute;
     width: 50px;
+    margin-left: 8px;
     height: 30px;
 }
 #wf-introduce .introduce-content .row .text .btn-bottom button{
@@ -88,6 +89,7 @@ ul li{
     color: white;
     border: none;
     margin: 0 8px;
+    padding: 0 .12rem;
 }
 #wf-introduce .introduce-content .row .text .btn-bottom .carousel-control-prev{
     left:auto;
@@ -154,8 +156,6 @@ ul li{
 }
 #wf-business .col-md-5{
     z-index: 9999;
-    /* display: flex;
-    align-items: center; */
     height: 300px;
 }
 #wf-business .business-bottom{
@@ -163,8 +163,9 @@ ul li{
     bottom: 0;
     width: 100%;
     color: white;
+    font-size: 16px;
     background-color: #fe9b00;
-    padding: 20px;
+    padding: .75rem;
     border-bottom: 5px solid #f17531;
     z-index: 8;
 }
@@ -254,11 +255,13 @@ ul li{
     width: 100%;
     text-align: center;
     background-color: #F4F4F4;
-    padding: 15px 0;
+    padding-top: 15px;
     margin-top: 35px;
 }
 #wf-partner .partner-title{
     color: #fe9b00;
+    font-size: .3rem;
+    margin-bottom: .2rem;
 }
 #wf-partner p:first-of-type strong{
     margin: 0 10px;
@@ -279,8 +282,8 @@ ul li{
 }
 /*联系我们小框框*/
 #wf-contact #right_fixed_box {
-	height: 130px;
-	width: 50px;
+    width: 50px;
+    padding: .2rem;
 	background-color: #fe9b00;
 	position: fixed;
 	right: -20px;
@@ -295,7 +298,6 @@ ul li{
 }
 #wf-contact .right_fixed_div{
 	width: 20px;
-	height: 70px;
 	text-align: center;
 }
 #wf-contact .right_fixed_div p{

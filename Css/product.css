@@ -1,6 +1,9 @@
+body{
+    font-size: 16px !important;
+}
 #wf-background{
     width: 100%;
-    height: 380px;
+    height: 8rem;
     background-image: url("../Image/productBack.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -8,7 +11,7 @@
 }
 #wf-background .backShade{
     width: 100%;
-    height: 380px;
+    height: 8rem;
     position: absolute;
     bottom: 0;
     opacity: 0.3;
@@ -31,26 +34,37 @@
     text-align: center;
 }
 #wf-background .backText>p:first-of-type{
-    font-size: 50px;
+    font-size: 1rem;
     margin: 0;
     text-align: center;
 }
 #wf-background .backText>p:last-of-type{
     margin: 0;
     text-align: center;
-    font-size: 30px;
+    font-size: .6rem;
 }
 
 #wf-productIntro{
     width:100%;
-    padding-top: 3%;
+    padding: 3% 0;
     background-image: url("../Image/point.jpg");
 }
 #wf-productIntro .container{
     width:80%;
 }
+#wf-productIntro .container .page-link{
+    padding: .2rem .32rem;
+}
+#wf-productIntro .container .page-item:last-child .page-link{
+    border-top-right-radius: .1rem;
+    border-bottom-right-radius: .1rem;
+}
+#wf-productIntro .container .page-item:first-child .page-link{
+    border-top-left-radius: .1rem;
+    border-bottom-left-radius: .1rem;
+}
 #wf-productIntro .container .col-md-2 .product-title{
-    width: 90%;
+    width: 100%;
     height: 40px;
     color: white;
     background-color: #fe9b00;
@@ -61,6 +75,16 @@
     letter-spacing: 2px;
     border-bottom: 3px solid #f17531;
 }
+#wf-productIntro .container .col-md-10 ul li .card{
+   border-radius: .1rem;
+}
+#wf-productIntro .container .col-md-10 ul li .card-body{
+    padding: .4rem;
+ }
+#wf-productIntro .container .col-md-10 ul li .card-header:first-child{
+    border-top-right-radius: .1rem;
+    border-top-left-radius: .1rem;
+ }
 #wf-productIntro .container .col-md-2 ul li{
     border: 1px solid gray;
     width: 100%;
@@ -72,17 +96,16 @@
 }
 #wf-productIntro .container .col-md-2 ul{
     margin: 0;
-    width: 90%;
+    width: 100%;
     padding: 0;
 }
 #wf-productIntro .container .col-md-10 .item-title{
     width: 100%;
     height: 40px;
+    display: flex;
     border-bottom: 1px solid gray;
 }
 #wf-productIntro .container .col-md-10 .item-title>div:first-of-type{
-    width: 20%;
-    height: 100%;
     border-bottom: 2px solid #fe9b00;
     font-size: 28px;
     color: #fe9b00;
@@ -97,7 +120,7 @@
 }
 #wf-productIntro .container .col-md-10 .product-content .card-header{
     background-color: #fe9b00;
-    padding: 6px 10px;
+    padding: .15rem .2rem;
 }
 #wf-productIntro .container .col-md-10 .product-content .card-body .col-md-4{
    display: flex;

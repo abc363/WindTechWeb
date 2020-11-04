@@ -4,7 +4,7 @@ ul{
 /* ***公司介绍*** */
 #wf-background{
     width: 100%;
-    height: 380px;
+    height: 8rem;
     background-image: url("../Image/companyBack.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -12,7 +12,7 @@ ul{
 }
 #wf-background .backShade{
     width: 100%;
-    height: 380px;
+    height: 8rem;
     position: absolute;
     bottom: 0;
     opacity: 0.3;
@@ -31,12 +31,13 @@ ul{
     margin: auto;
 }
 #wf-background .backText>p:first-of-type{
-    font-size: 50px;
+    font-size: 1rem;
     margin: 0;
     text-align: center;
 }
 #wf-background .backText>p:last-of-type{
     margin: 0;
+    font-size: 0.4rem;
     text-align: center;
 }
 #wf-background .backText .text-bottom{
@@ -48,14 +49,14 @@ ul{
     text-align: right;
     float: left;
     color: white;
-    font-size: 50px;
+    font-size: .9rem;
     /* padding-right: 25px; */
 }
 #wf-background .backText .text-bottom .text-bottom-right{
     width: 55%;
     float: left;
     color: white;
-    font-size: 35px;
+    font-size: .6rem;
     text-align: center;
 }
 #wf-background .backText .text-bottom .text-bottom-right>p:last-of-type{

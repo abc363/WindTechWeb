@@ -1,0 +1,98 @@
+/*媒体查询*/
+/*适应PC端（笔记本&台式）网页缩放*/
+@media only screen and (max-width: 1000px) {
+    #wf-introduce .introduce-content .row .text .btn-bottom{
+        display: none;
+    }
+}	
+
+/*适应手机移动端*/
+@media only screen and (max-width: 700px) {
+	#wf-header .navbar-light>.container{
+        height: 1.2rem;
+    }
+    #wf-footer .row .col-md-4{
+        display: none;
+    }
+    /* 联系我们 */
+    #wf-map{
+        height: auto;
+    }
+    #wf-map .map-content{
+        width: 100%;
+    }
+    #wf-map .map-wrap{
+        float: inherit;
+        width: 100%;
+        height: 8rem;
+    }
+    #wf-map .map-content .second-col .dropdown-toggle{
+        display: none;
+    }
+    /* 公司介绍 */
+    #wf-background .backText .text-bottom{
+        display: none;
+    }
+    #wf-comIntro .comIntro-header button{
+        width: 80%;
+    }
+    #wf-comIntro .container{
+        font-size: .37rem;
+    }
+    #wf-comIntro .container .col-md-5{
+        line-height: .65rem;
+    }
+    #wf-comIntro #company-introduce .col-md-7 div{
+        width: 100%;
+        padding: .1rem 0;
+    }
+    #wf-comIntro .container .col-md-7{
+        margin-top: .2rem;
+    }
+    #wf-comIntro .container .col-md-7 img{
+        width: 90%;
+    }
+    /* 产品详细信息 */
+    #wf-productInfo .info-photo .info-photo-content .photo-li{
+        width: 48%;
+    }
+   /* 轮播图 */
+    #wf-carousel .carousel-inner .carousel-item{
+        height: 7rem;
+    }
+    /* 主页 */
+    #wf-introduce .introduce-content .row .col-md-6:first-of-type{
+        display: none;
+    }
+    #wf-business{
+        height: auto;
+    }
+    #wf-partner .partner-title{
+        font-size: .45rem;
+    }
+    #wf-business .business-bottom{
+        position: inherit;
+    }
+    #wf-business .business-bottom button{
+        margin: .2rem;
+    }
+    #wf-partner .partner-title span{
+        display: none;
+    }
+    #wf-business .business-bottom{
+        padding: .5rem;
+    }
+    #wf-product .container .row .col-md-3{
+        width: 50%;
+    }
+    #wf-partner .container .row .col-md-3{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 560px) {
+	
+}
+/*台式电脑大于1500*/
+@media screen and (min-width:1500px){
+ 
+}
