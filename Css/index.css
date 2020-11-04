@@ -282,8 +282,9 @@ ul li{
 }
 /*联系我们小框框*/
 #wf-contact #right_fixed_box {
-    width: 50px;
-    padding: .2rem;
+    width: 58px;
+    padding-bottom: .2rem;
+    padding-top: .1rem;
 	background-color: #fe9b00;
 	position: fixed;
 	right: -20px;
@@ -298,7 +299,8 @@ ul li{
 }
 #wf-contact .right_fixed_div{
 	width: 20px;
-	text-align: center;
+    text-align: center;
+    font-size: 15px;
 }
 #wf-contact .right_fixed_div p{
 	margin-bottom: 0 !important;
