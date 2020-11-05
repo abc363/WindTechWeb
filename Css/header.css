@@ -9,6 +9,9 @@ ul li{
     list-style: none;
 }
 /* ***导航栏*** */
+#wf-header{
+    z-index: 9999;
+}
 #wf-header .navbar-light>.container{
     height: 0.9rem;
 }
@@ -55,7 +58,7 @@ ul li{
     color: #fe9b00;
     font-size: .5rem;
     letter-spacing: 1px;
-	text-shadow: 2px 2px 0 black;
+	text-shadow: 2px 2px 0 #39311d;
     font-family: "Times New Roman",Times,serif;
 }
 #wf-header .navbar-text img{
@@ -89,6 +92,7 @@ ul li{
     font-size: .3rem;
     min-width: auto;
     padding: 0;
+    margin: 0;
 }
 #wf-header .navbar-nav .dropdown-menu .dropdown-item{
     padding: .2rem .65rem;
@@ -97,5 +101,5 @@ ul li{
     background-color: #555555;
     color: #fe9b00;
     cursor: pointer;
-    border-radius:.25rem;
+    border-radius:.15rem;
 }

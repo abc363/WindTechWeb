@@ -63,7 +63,9 @@ function showProduct(currentPage,type=''){
                                 <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img src="${item.pro_fontTiltOne}">
+                                        <div class="image-content">
+                                            <img src="${item.pro_fontTiltOne}">
+                                        </div>
                                     </div>
                                     <div class="col-md-8">
                                         <p>${item.pro_info}<span onclick="toMore(${item.pid})">MORE>></span></p>

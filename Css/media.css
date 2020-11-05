@@ -56,6 +56,9 @@
     #wf-productInfo .info-photo .info-photo-content .photo-li{
         width: 48%;
     }
+    #wf-productInfo #info-title{
+        font-size: .35rem;
+     }
    /* 轮播图 */
     #wf-carousel .carousel-inner .carousel-item{
         height: 7rem;

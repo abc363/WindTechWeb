@@ -44,7 +44,7 @@ function showProductByid(pid){
                     Object.keys(objTitle).forEach(item=>{
                         const template = ` <li class="photo-li">
                             <div class="card">
-                                <img src="${data[item]}" class="card-img-top">
+                                <div class="image-content"><img src="${data[item]}" class="card-img-top"></div>
                                 <div class="card-body">
                                 <h5 class="card-title">${objTitle[item]}图</h5>
                                 </div>

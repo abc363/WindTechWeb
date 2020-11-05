@@ -3,6 +3,7 @@
     width:100%;
     background-color: #f7f7f7;
     padding: 30px 10%;
+    font-size: 15px;
 }
 #wf-productInfo .info-content p{
    margin: 0;
@@ -13,7 +14,7 @@
     color: gray;
 }
 #wf-productInfo #info-title{
-    font-size: .35rem;
+    font-size: 19px;
     font-weight: 600;
  }
  #wf-productInfo .info-intro{
@@ -54,4 +55,15 @@
 }
 #wf-productInfo .info-photo .info-photo-content .photo-li .card-title{
     text-align: center;
+}
+#wf-productInfo .info-photo .info-photo-content .photo-li .image-content{
+    overflow: hidden;
+}
+#wf-productInfo .info-photo .info-photo-content .photo-li img{
+	transition: all 1.8s ease 0s;
+}
+#wf-productInfo .info-photo .info-photo-content .photo-li img:hover{
+	-webkit-transform:scale(1.2);
+	-o-transform:scale(1.2);
+	-ms-transform: scale(1.2);
 }
