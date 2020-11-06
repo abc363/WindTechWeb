@@ -99,9 +99,10 @@ body{
     align-items: center;
  }
  #wf-comIntro .container .col-md-5 .image-raduis{
-     border: 2px solid white;
+     border: .2rem solid white;
     width: 60%;
-    
+    border-radius: 50%;
+    box-shadow: 1px 1px 8px gray;
  }
 #wf-comIntro .container .col-md-5 img{
    width: 100%;

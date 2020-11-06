@@ -267,7 +267,7 @@ ul li{
 }
 #wf-partner .container img{
     width: 55%;
-    height:50px;
+    height:.85rem;
 }
 #wf-partner .container .col-md-3 .image-wrap{
     width: 100%;
@@ -276,7 +276,7 @@ ul li{
 #wf-partner .container .col-md-3 p{
     width: 100%;
     margin: 6px 0;
-    font-size: 15px;
+    font-size: .2rem;
 
 }
 /*联系我们小框框*/

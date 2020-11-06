@@ -147,3 +147,8 @@
     display: table;
     margin:auto;
 }
+#wf-map .map-content .row-wrap .dropdown-menu{
+    min-width: inherit;
+    border-radius: .15rem;
+    padding:.3rem;
+}
