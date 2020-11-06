@@ -164,7 +164,7 @@ ul li{
     color: white;
     font-size: 16px;
     background-color: #fe9b00;
-    padding: .75rem;
+    padding: .7rem;
     border-bottom: 5px solid #f17531;
     z-index: 8;
 }
@@ -276,13 +276,13 @@ ul li{
 #wf-partner .container .col-md-3 p{
     width: 100%;
     margin: 6px 0;
-    font-size: .2rem;
+    font-size: .25rem;
 
 }
 /*联系我们小框框*/
 #wf-contact #right_fixed_box {
-    width: 58px;
     padding-bottom: .2rem;
+    padding-right: 30px;
     padding-top: .1rem;
 	background-color: #fe9b00;
 	position: fixed;

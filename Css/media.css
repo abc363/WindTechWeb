@@ -4,6 +4,9 @@
     #wf-introduce .introduce-content .row .text .btn-bottom{
         display: none;
     }
+    #wf-introduce .introduce-content{
+        width: 90%;
+    }
 }	
 
 /*适应手机移动端*/
