@@ -103,6 +103,13 @@
     #wf-productInfo .info-content{
         padding: .5rem;
     }
+    #wf-partner .container .col-md-1-5{
+        width: 50%;
+        float: left;
+    }
+    .introduce-wrap p:first-of-type>span{
+        display: none;
+    }
     /* #wf-productInfo #info-title{
         font-size: .45rem;
     } */

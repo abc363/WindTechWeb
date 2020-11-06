@@ -12,7 +12,7 @@
    margin: 0;
 }
 #wf-productInfo .info-content p:last-of-type{
-    font-size: .2rem;
+    font-size: 13px;
     text-align: right;
     color: gray;
 }
@@ -53,6 +53,7 @@
 #wf-productInfo .info-photo .info-photo-content .photo-li{
     width: 31%;
     margin: 1%;
+    font-size: 16px;
     float: left;
     box-shadow: 0px 10px 40px -10px rgba(0,64,128,0.2);
 }

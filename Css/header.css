@@ -1,6 +1,8 @@
 /* ***通用样式*** */
-body{
+body,html{
     font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+    width:100%;
+    min-width: fit-content;
 }
 a{
     text-decoration: none;
@@ -36,7 +38,7 @@ ul li{
 }
 #wf-header .navbar-expand-lg .navbar-nav .nav-link{
     padding-left: 0;
-    padding-right: .8rem;
+    padding-right: .6rem;
     margin: .15rem 0;
 }
 .nav-link{
@@ -49,8 +51,8 @@ ul li{
     padding: 0;
 }
 #wf-header .wf-navbar .navbar-brand img{
-    width: 0.9rem;
-    height: 0.7rem;
+    width: 1.35rem;
+    height: 0.95rem;
     margin-right: .1rem;
     margin-left: .2rem;
 }
