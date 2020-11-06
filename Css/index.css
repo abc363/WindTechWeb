@@ -10,6 +10,9 @@ ul li{
 }
 
 /* ***轮播图*** */
+#wf-carousel{
+    margin-top: .9rem;
+}
 #wf-carousel .carousel-inner .carousel-item{
     height: 500px;
 }
