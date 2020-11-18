@@ -139,13 +139,13 @@ body{
  }
 #wf-productIntro .container .col-md-10 .product-content .card-body .col-md-4 img{
     width: 100%;
-	transition: all 1.8s ease 0s;
+	transition: all 2s ease 0s;
     height: auto;
 }
 #wf-productIntro .container .col-md-10 .product-content .card-body .col-md-4 img:hover{
-    -webkit-transform:scale(1.2);
-	-o-transform:scale(1.2);
-	-ms-transform: scale(1.2);
+    -webkit-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	-ms-transform: scale(1.1);
 }
 #wf-productIntro .container .col-md-10 .product-content .card-body .col-md-8 .product-file{
     text-align: right;

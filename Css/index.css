@@ -72,13 +72,13 @@
 }
 #wf-introduce .introduce-content #wf-company img{
     width: 100%;
-	transition: all 1.8s ease 0s;
+	transition: all 2s ease 0s;
     height: 350px;
 }
 #wf-introduce .introduce-content #wf-company img:hover{
-    -webkit-transform:scale(1.2);
-	-o-transform:scale(1.2);
-	-ms-transform: scale(1.2);
+    -webkit-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	-ms-transform: scale(1.1);
 }
 #wf-introduce .introduce-content{
     width: 70%;
@@ -220,7 +220,7 @@
     width: 110px;
     height: 110px;
     background-color: #fe9b00;
-    transition: all 0.4s ease 0s;
+    transition: all 0.6s ease 0s;
 }
 #wf-product .container .row .col-md-3 .text-wrap{
     width: 100%;
