@@ -39,34 +39,30 @@
     #wf-comIntro .comIntro-header button{
         width: 80%;
     }
-    #wf-comIntro .container{
-        font-size: .37rem;
-    }
     #wf-comIntro .container .col-md-5{
         line-height: .65rem;
     }
-    #wf-comIntro #company-introduce .col-md-7 div{
-        width: 100%;
-        padding: .1rem 0;
-    }
     #wf-comIntro .container .col-md-7{
         margin-top: .2rem;
-    }
-    #wf-comIntro .container .col-md-7 img{
-        width: 90%;
     }
     /* 产品详细信息 */
     #wf-productInfo .info-photo .info-photo-content .photo-li{
         width: 48%;
     }
     #wf-productInfo #info-title{
-        font-size: .35rem;
+        font-size: 17px;
      }
    /* 轮播图 */
     #wf-carousel .carousel-inner .carousel-item{
         height: 7rem;
     }
     /* 主页 */
+    #wf-carousel .carousel-indicators{
+        bottom: 0;
+    }
+    #wf-carousel .carousel-inner .carousel-item .carousel-caption{
+        display: none;
+    }
     #wf-introduce .introduce-content .row .col-md-6:first-of-type{
         display: none;
     }
@@ -109,6 +105,16 @@
     }
     .introduce-wrap p:first-of-type>span{
         display: none;
+    }
+    #wf-comIntro{
+        padding:15px 5%;
+    }
+    /* 页脚 */
+    #wf-footer .row .col-md-8{
+        font-size: 13px;
+    }
+    #wf-footer .row .col-md-8 p{
+        margin: 2px 0;
     }
     /* #wf-productInfo #info-title{
         font-size: .45rem;

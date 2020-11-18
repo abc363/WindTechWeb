@@ -2,7 +2,7 @@
 body,html{
     font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
     width:100%;
-    min-width: fit-content;
+    overflow-x:hidden;
 }
 a{
     text-decoration: none;
@@ -51,8 +51,8 @@ ul li{
     padding: 0;
 }
 #wf-header .wf-navbar .navbar-brand img{
-    width: 1.35rem;
-    height: 0.95rem;
+    width: 1.2rem;
+    height: 0.6rem;
     margin-right: .1rem;
     margin-left: .2rem;
 }
@@ -91,7 +91,7 @@ ul li{
 #wf-header .navbar-nav .dropdown-menu{
     background-color: #555555;
     color: #e0e0e0;
-    font-size: .3rem;
+    font-size: 14px;
     min-width: auto;
     padding: 0;
     margin: 0;

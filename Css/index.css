@@ -3,7 +3,7 @@
     margin-top: .9rem;
 }
 #wf-carousel .carousel-inner .carousel-item{
-    height: 500px;
+    height: 510px;
 }
 #wf-carousel .carousel-indicators li{
     background-color: #fe9b00 !important;
@@ -21,6 +21,24 @@
 #wf-carousel .carousel-inner .carousel-item img{
     width: 100%;
     height: 100%;
+}
+#wf-carousel .carousel-inner .carousel-item .carousel-caption p:first-of-type{
+    font-size: 26px;
+    font-weight: 600;
+}
+#wf-carousel .carousel-inner .carousel-item .carousel-caption p{
+    color: #fe9b00;
+    font-size: 18px;
+}
+#wf-carousel .carousel-inner .carousel-item .carousel-caption{
+    width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+#wf-carousel .carousel-indicators{
+    bottom: 110px;
 }
 /* ***公司介绍*** */
 .introduce-wrap{
@@ -162,7 +180,7 @@
     color: white;
 }
 #wf-business .business-bottom .business_span span{
-	text-shadow: 2px 2px 0 #f17531;
+	text-shadow: 2px 3px 0 #f17531;
 	font-size: 28px;
     color: #5c5858;
     cursor: pointer;
