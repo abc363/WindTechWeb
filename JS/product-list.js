@@ -15,8 +15,8 @@ $.ajax({
         if(json.state == 200){
             // 找出pro_Type的类别
             var arrLi = [];
-            $.each(json.data, (index,info)=>{
-               var li = `<li onclick="showProduct(1,'${info.pro_Type}')">${info.pro_Type}</li>`
+            $.each(json.data, function(index,info){
+               var li = '<li onclick="showProduct(1,\''+info.pro_Type+'\')">'+info.pro_Type+'</li>'
                 arrLi.push(li);
             })
             document.getElementById('ul-title').innerHTML = arrLi.join('');
@@ -25,14 +25,18 @@ $.ajax({
         }
     }
 });
-function showProduct(currentPage,type=''){
+function showProduct(currentPage){
+    var type = '';
     changeType = type;
     const url = type ?  ServerHost+'/products/search':
-                        ServerHost+`/products/show?pageSize=${pageSize}&startPage=${pageSize*(currentPage-1)}`;
+                        ServerHost+'/products/show?pageSize='+pageSize+'&startPage='+pageSize*(currentPage-1);
     const sendType = type ? 'POST':'GET';
     type && (document.getElementById('product-text-title').innerHTML = type);
     type && (isGetPag = false);
-    const sendData = type ? `{"pro_State":"","pro_Name":"","pro_Type":"${type}","pageSize":${pageSize},"startPage":${pageSize*(currentPage-1)}}`:'';
+    const sendData = type ? '{"pro_State":"","pro_Name":"","pro_Type":"'+type+'","pageSize":'+pageSize+',"startPage":'+pageSize*(currentPage-1)+'}':'';
+    console.log(url);
+    console.log(sendType);
+    console.log(sendData);
     $.ajax({
         "async":false,
         "url":url,
@@ -45,40 +49,40 @@ function showProduct(currentPage,type=''){
                 var thisData=json.data.tableData;
                 document.getElementById('product_list_ul').innerHTML = function(){
                     var arr = [];
-                    $.each(thisData, (index, item)=>{
+                    $.each(thisData, function(index, item){
                         const obj ={
                             'pro_file':'',
                             'pro_driver':'',
                             'pro_finger':'',
                             'pro_video':'',
                         }
-                        Object.keys(obj).forEach(e=>{
+                        Object.keys(obj).forEach(function(e){
                             if(item[e] == null || item[e] == ''){
                                 obj[e] = 'none';
                             }
                         })
-                        var html =  `<li>
-                            <div class="card">
-                                <h5 class="card-header">${item.pro_Name}</h5>
-                                <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="image-content">
-                                            <img src="${item.pro_fontTiltOne}">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <p>${item.pro_info}<span onclick="toMore(${item.pid})">MORE>></span></p>
-                                        <div class="product-file"><span onclick="previewFile('${item.pro_video}')" style="display:${obj.pro_video}">演示视频</span>
-                                            <span onclick="downLoadFile('${item.pro_driver}')" style="display:${obj.pro_driver}">上位机配置工具</span>
-                                            <span  onclick="previewFile('${item.pro_file}')" style="display:${obj.pro_file}">技术参考手册</span>
-                                            <span onclick="previewFile('${item.pro_finger}')" style="display:${obj.pro_finger}">快速入门指南</span>
-                                            <span>库存：${item.pro_Num}</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>`;                    
+                        var html =  '<li>'+
+                            '<div class="card">'+
+                                '<h5 class="card-header">'+item.pro_Name+'</h5>'+
+                                '<div class="card-body">'+
+                                '<div class="row">'+
+                                    '<div class="col-md-4">'+
+                                        '<div class="image-content">'+
+                                            '<img src="'+item.pro_fontTiltOne+'">'+
+                                        '</div>'+
+                                    '</div>'+
+                                    '<div class="col-md-8">'+
+                                        '<p>'+item.pro_info+'<span onclick="toMore('+item.pid+')">MORE>></span></p>'+
+                                        '<div class="product-file"><span onclick="previewFile(\''+item.pro_video+'\')" style="display:'+obj.pro_video+'">演示视频</span>'+
+                                            '<span onclick="downLoadFile(\''+item.pro_driver+'\')" style="display:'+obj.pro_driver+'">上位机配置工具</span>'+
+                                            '<span  onclick="previewFile(\''+item.pro_file+'\')" style="display:'+obj.pro_file+'">技术参考手册</span>'+
+                                            '<span onclick="previewFile(\''+item.pro_finger+'\')" style="display:'+obj.pro_finger+'">快速入门指南</span>'+
+                                            '<span>库存：'+item.pro_Num+'</span></div>'+
+                                        '</div>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</li>';                    
                         arr.push(html);
                     });
                     return arr.join('');
@@ -90,21 +94,21 @@ function showProduct(currentPage,type=''){
                         var panLi = '';
                         for(let i=0;i<total;i++){
                             if(i==0){
-                                panLi=`<li class="page-item" id="prev">
-                                    <a class="page-link" tabindex="-1" aria-disabled="true" onclick="toPrev()">上一页</a>
-                                </li><li class="page-item" id="liItem${i+1}">
-                                <a class="page-link" onclick="showProduct('${i+1}','${changeType}')">${i+1}</a>
-                            </li>`;
+                                panLi='<li class="page-item" id="prev">'+
+                                    '<a class="page-link" tabindex="-1" aria-disabled="true" onclick="toPrev()">上一页</a>'+
+                                '</li><li class="page-item" id="liItem'+(i+1)+'">'+
+                                '<a class="page-link" onclick="showProduct('+(i+1)+','+changeType+')">'+(i+1)+'</a>'+
+                            '</li>';
                             }else if(i==total-1){
-                                panLi=`<li class="page-item" id="liItem${i+1}">
-                            <a class="page-link" onclick="showProduct('${i+1}','${changeType}')">${i+1}</a>
-                        </li><li class="page-item" id="next">
-                        <a class="page-link" onclick="toNext()">下一页</a>
-                    </li>`;
+                                panLi='<li class="page-item" id="liItem'+(i+1)+'">'+
+                            '<a class="page-link" onclick="showProduct('+(i+1)+','+changeType+')">'+(i+1)+'</a>'+
+                        '</li><li class="page-item" id="next">'+
+                        '<a class="page-link" onclick="toNext()">下一页</a>'+
+                    '</li>';
                             }else{
-                                panLi=`<li class="page-item" id="liItem${i+1}">
-                                <a class="page-link" onclick="showProduct('${i+1}','${changeType}')">${i+1}</a>
-                            </li>`
+                                panLi='<li class="page-item" id="liItem'+(i+1)+'">'+
+                                '<a class="page-link" onclick="showProduct('+(i+1)+','+changeType+')">'+(i+1)+'</a>'+
+                            '</li>'
                             }
                         pagArr.push(panLi);
                         }
@@ -112,8 +116,8 @@ function showProduct(currentPage,type=''){
                     }();
                     isGetPag = true;
                 }
-                $(`#liItem${prevPage}`).removeClass('active');
-                $(`#liItem${currentPage}`).addClass('active');
+                $('#liItem'+prevPage).removeClass('active');
+                $('#liItem'+currentPage).addClass('active');
                 outCurrentPage = prevPage = currentPage;
                 if(currentPage ==1 && !$('#prev').hasClass('disabled')){
                     $('#prev').addClass('disabled');
