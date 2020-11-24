@@ -3,7 +3,7 @@
     margin-top: .9rem;
 }
 #wf-carousel .carousel-inner .carousel-item{
-    height: 510px;
+    height: 37vw;
 }
 #wf-carousel .carousel-indicators li{
     background-color: #fe9b00 !important;
@@ -220,7 +220,7 @@
     width: 110px;
     height: 110px;
     background-color: #fe9b00;
-    transition: all 0.6s ease 0s;
+    transition: all 1.2s ease 0s;
 }
 #wf-product .container .row .col-md-3 .text-wrap{
     width: 100%;

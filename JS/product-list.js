@@ -9,6 +9,7 @@ showProduct(1);
 $.ajax({
     "async":false,
     "url":ServerHost+"/products/showType",
+    "cache":false,
     "type":"GET",
     "dataType":"json",
     "success":function(json){
@@ -34,14 +35,12 @@ function showProduct(currentPage){
     type && (document.getElementById('product-text-title').innerHTML = type);
     type && (isGetPag = false);
     const sendData = type ? '{"pro_State":"","pro_Name":"","pro_Type":"'+type+'","pageSize":'+pageSize+',"startPage":'+pageSize*(currentPage-1)+'}':'';
-    console.log(url);
-    console.log(sendType);
-    console.log(sendData);
     $.ajax({
         "async":false,
         "url":url,
         "type":sendType,
         "data":sendData,
+        "cache":false,
         "dataType":"json",
         "contentType":'application/json;charset=UTF-8',
         "success":function(json){
@@ -68,7 +67,7 @@ function showProduct(currentPage){
                                 '<div class="row">'+
                                     '<div class="col-md-4">'+
                                         '<div class="image-content">'+
-                                            '<img src="'+item.pro_fontTiltOne+'">'+
+                                            '<img src="'+item.pro_fontTiltOne+'"alt="微风科技'+item.pro_Name+'图">'+
                                         '</div>'+
                                     '</div>'+
                                     '<div class="col-md-8">'+

@@ -9,8 +9,14 @@ function chooseType(type,btnType,other){
     btnObj.css("borderBottomColor","#f17531");
     otherObj.css("borderBottomColor","#A9A9A9");
 }
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
 //页面传参
-var label=$.query.get("label");
+var label=GetQueryString("label");
 if(label==2){
     chooseType('company-faith','faith','intro');
 }else{
