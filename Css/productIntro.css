@@ -119,15 +119,16 @@ div.col-8 div {
 #wf-productInfo .info-photo .container .row .col-md-9 #list-scroll p{
     font-size: 18px;
     font-weight: 600;
-    margin: 10px 0;
+    margin-bottom: 10px;
     padding: 6px 15px;
     background-color: #fe9b00;
     color: white;
-    border-radius: 6px;
+    border-radius: 4px;
 }
-#wf-productInfo .info-photo .container .row .col-md-9 #list-scroll>p:last-of-type{
-    margin: 0 0 10px !important;
-}
+/* #wf-productInfo .info-photo .container .row .col-md-9 #list-scroll p:first-of-type{
+    margin-bottom: 10px !important;
+    margin-top: 0 !important;
+} */
 .modal .modal-dialog .modal-body img{
     width: 100%;
     height: auto;

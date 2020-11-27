@@ -75,17 +75,12 @@ function showProductByid(pid){
                     })
                     return arrScroll.join("");                    
                 }();
-                // $('#scroll-div').scrollFix({
-                //     zIndex:1000,
-                //     distanceTop:250,}
-                // );
             }else{
                 alert(json.message);
             }
         }
     })
 }
-// $('#myModal').on('hide');
     function clickModel(title,url) {
         document.getElementById("exampleModalLabel").innerHTML = title+'图';
         document.getElementById("modal-image").src = url;
