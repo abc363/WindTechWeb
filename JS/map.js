@@ -22,7 +22,7 @@
     }
     function addMapOverlay(){
       var markers = [
-        {content:"广东省佛山市南海区桂城街道金科路6号粤港金融科技园1座11楼18室",title:"佛山市微风科技有限公司",imageOffset: {width:0,height:3},position:{lat:23.01802,lng:113.068751}}
+        {content:"广东省佛山市禅城区华宝南路13号国家火炬创新创业园E座5楼511",title:"佛山市微风科技有限公司",imageOffset: {width:0,height:3},position:{lat:23.01802,lng:113.068751}}
       ];
       for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);

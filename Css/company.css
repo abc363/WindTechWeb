@@ -107,19 +107,36 @@ body{
     box-shadow: 1px 1px 8px gray;
  }
 #wf-comIntro .container .col-md-5 img{
-   width: 100%;
+    transition: all 2s ease 0s;
+    width: 100%;
     height: auto;
 }
 #wf-comIntro .container .col-md-7 img{
-   width: 100%;
+    transition: all 2s ease 0s;
+    width: 100%;
    height: auto;
+}
+#wf-comIntro .container .col-md-5 img:hover{
+    -webkit-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	-ms-transform: scale(1.1);
+}
+#wf-comIntro .container .col-md-7 img:hover{
+    -webkit-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	-ms-transform: scale(1.1);
 }
 #wf-comIntro #company-introduce .col-md-7 .div-content{
     border-radius: 10px;
     width: 70%;
      border: .2rem solid white;
     box-shadow: 1px 1px 8px gray;
+    overflow: hidden;
     margin: auto;
+ }
+ #wf-comIntro #company-introduce .col-md-5 .image-raduis{
+    overflow: hidden;
+	display: inline-block;
  }
  #wf-comIntro #company-faith .col-md-7 .text-content{
     width: 100%;

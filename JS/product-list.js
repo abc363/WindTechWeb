@@ -145,7 +145,7 @@ function downLoadFile(url){
     window.open(ServerHost+"/products/downFile?path="+filePath);
 }
 function toMore(id){
-    window.location.href="productInfo.html?pid="+id;
+    window.location.href="productIntro.html?pid="+id;
 }
 function showAllProduct(){
     showProduct(1);

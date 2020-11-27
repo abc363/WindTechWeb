@@ -18,6 +18,9 @@ function showProductByid(pid){
                 var data = json.data;
                 document.getElementById('info-title').innerHTML = data.pro_Name+'（'+data.pro_Type+'）';
                 document.getElementById('info-intro').innerHTML = data.pro_info;
+                document.getElementById('productIntroPhoto').innerHTML = '<img src="'+data.pro_fontTiltOne+'"/>';
+               
+
                 const obj ={
                     'pro_file':'',
                     'pro_driver':'',
@@ -45,27 +48,48 @@ function showProductByid(pid){
                     'pro_font':'正面',
                     'pro_back':'背面',
                 }
-                document.getElementById("info-photo-ul").innerHTML = function(){
-                    var arr = [];
+                document.getElementById('row-mini').innerHTML = function(){
+                    var arrMini = [];
                     Object.keys(objTitle).forEach(item=>{
-                        const template = '<li class="photo-li">'+
-                            '<div class="card">'+
-                                '<div class="image-content"><img src="'+data[item]+'" class="card-img-top" alt="微风科技'+data.pro_Name+objTitle[item]+'图"></div>'+
-                                '<div class="card-body">'+
-                                '<h5 class="card-title">'+objTitle[item]+'图</h5>'+
-                                '</div>'+
-                            '</div>'+
-                        '</li>'
+                        const template = '<div class="col-md-2"><img src="'+data[item]+'" class="img-mini">'+
+                        '<div class="img-hover" data-toggle="modal" data-target="#exampleModal" onclick="clickModel(\''+objTitle[item]+'\',\''+data[item]+'\')">点击放大查看</div></div>'
+                        arrMini.push(template);
+                    })
+                    return arrMini.join("");
+                }();
+                document.getElementById("list-example").innerHTML = function(){
+                    var arr = [];
+                    Object.keys(objTitle).forEach((item,index)=>{
+                        const isActive = index === 0 ? 'active': '';
+                        const template = '<a class="list-group-item list-group-item-action '+isActive+'" href="#list-item-'+index+'">'+objTitle[item]+'图</a>'
                         arr.push(template);
                     })
                     return arr.join("");                    
                 }();
+                document.getElementById("list-scroll").innerHTML = function(){
+                    var arrScroll = [];
+                    Object.keys(objTitle).forEach((item,index)=>{
+                        const template = '<p id="list-item-'+index+'">'+objTitle[item]+'图</p>'+
+                        '<img src="'+data[item]+'" alt="微风科技'+data.pro_Name+objTitle[item]+'图"/>'
+                        arrScroll.push(template);
+                    })
+                    return arrScroll.join("");                    
+                }();
+                // $('#scroll-div').scrollFix({
+                //     zIndex:1000,
+                //     distanceTop:250,}
+                // );
             }else{
                 alert(json.message);
             }
         }
     })
 }
+// $('#myModal').on('hide');
+    function clickModel(title,url) {
+        document.getElementById("exampleModalLabel").innerHTML = title+'图';
+        document.getElementById("modal-image").src = url;
+    }
 function previewFile(url){
     window.open(url);
 }

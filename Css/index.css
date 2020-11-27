@@ -69,10 +69,11 @@
 	overflow: hidden;
 	display: inline-block;
     width: 100%;
+    height: auto;
 }
 #wf-introduce .introduce-content #wf-company img{
     width: 100%;
-	transition: all 2s ease 0s;
+    transition: all 2s ease 0s;
     height: 350px;
 }
 #wf-introduce .introduce-content #wf-company img:hover{

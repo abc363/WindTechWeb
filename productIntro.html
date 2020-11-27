@@ -8,15 +8,15 @@
     <title>产品介绍</title>
     <link rel="icon"href="Image/logo2.png"type="image/x-icon"/>
     <link rel="stylesheet" href="BootStrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="Css/productInfo.css"/>
+    <link rel="stylesheet" href="Css/productIntro.css"/>
     <link rel="stylesheet" href="Css/header.css"/>
     <link rel="stylesheet" href="Css/footer.css"/>
     <link rel="stylesheet" href="Css/media.css"/>
 		<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
   </head>
-<body>
-       <!-- 导航头 -->
-  <header id="wf-header">
+<body >
+  <!-- 导航头 -->
+<header id="wf-header">
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light wf-navbar">
       <div class="container">
         <a class="navbar-brand" href="#">
@@ -56,19 +56,68 @@
     </nav>
   </header>
     <section id="wf-productInfo">
-        <div class="info-content">
-            <p id="info-title"></p>
-            <p id="info-intro"></p>
-            <p id="info-file"></p>
-            <p>若您想购买该产品或者查看更多信息，可搜索淘宝店铺“ 佛山微风科技 ”或者直接点击链接：
-                <a href="https://shop526355440.taobao.com/?spm=a230r.7195193.1997079397.27.34465d50OYuQYv">点击链接</a></p>
-        </div>
-        <div class="info-photo">
-            <div class="info-photo-content">
-                <ul id="info-photo-ul"></ul>
+     <div class="productIntro-head">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-4" id="productIntroPhoto"></div>
+              <div class="col-md-8">
+                <div class="info-content">
+                  <p id="info-title"></p>
+                  <p id="info-intro"></p>
+                  <p id="info-file"></p>
+                  <p>若您想购买该产品或者查看更多信息，可搜索淘宝店铺“ 佛山微风科技 ”或者直接点击链接：
+                      <a href="https://shop526355440.taobao.com/?spm=a230r.7195193.1997079397.27.34465d50OYuQYv">点击链接</a></p>
+              </div>
+              </div>
             </div>
         </div>
+        <div class="productIntro-footer">
+          <div class="container">
+            <div class="row" id="row-mini">
+            </div>
+        </div>
+        </div>
+      </div>
+        <div class="info-photo">
+          <!-- <div class="container">
+            <div class="row">
+              <div class="col-md-3" id="scroll-div">
+                <div id="list-example" class="list-group"></div>
+            </div>
+            <div class="col-md-9">
+              <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example" id="list-scroll"></div>
+          </div>
+            </div>
+          </div> -->
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3" id="scroll-div">
+                <div id="list-example" class="list-group"></div>
+            </div>
+            <div class="col-md-9">
+              <div data-spy="scroll" data-target="#list-example" data-offset="0" id="list-scroll">
+            </div>
+          </div>
+            </div>
+            </div>
+        </div>
+        </div>
     </section>
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <strong class="modal-title" id="exampleModalLabel"></strong>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img id="modal-image"/>
+          </div>
+        </div>
+      </div>
+    </div>
       <!-- 页脚 -->
       <footer id="wf-footer">
         <div class="footer-up">
@@ -91,9 +140,10 @@
         <p>本页面需要浏览器支持（启用）脚本JavaScript。</p>
       </noscript>
 <script src="JS/jquery-1.11.0.min.js"></script>
-<!-- <script src="JS/jquery.params.js"></script> -->
 <script src="BootStrap/js/bootstrap.min.js"></script>
-<script src="JS/product-info.js"></script>
+<script src="JS/product-intro.js"></script>
 <script src="JS/jump.js"></script>
+<script src="JS/scrollfix.min.js"></script>
+<script src="JS/scroll.js"></script>
 </body>
 </html>
