@@ -106,6 +106,12 @@
         width: 50%;
         float: left;
     }
+    #wf-productInfo .info-photo .container .row .col-md-3{
+        display: none;
+    }
+    #wf-productInfo .info-photo .container .row>div:first-of-type{
+        display: none !important;
+    }
     .introduce-wrap p:first-of-type>span{
         display: none;
     }

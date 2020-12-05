@@ -47,7 +47,7 @@ function showProductByid(pid){
                 }
                 document.getElementById("info-photo-ul").innerHTML = function(){
                     var arr = [];
-                    Object.keys(objTitle).forEach(item=>{
+                    Object.keys(objTitle).forEach(function(item){
                         const template = '<li class="photo-li">'+
                             '<div class="card">'+
                                 '<div class="image-content"><img src="'+data[item]+'" class="card-img-top" alt="微风科技'+data.pro_Name+objTitle[item]+'图"></div>'+

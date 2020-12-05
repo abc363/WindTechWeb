@@ -3,7 +3,7 @@
     margin-top: .9rem;
 }
 #wf-carousel .carousel-inner .carousel-item{
-    height: 37vw;
+    height: 38vw;
 }
 #wf-carousel .carousel-indicators li{
     background-color: #fe9b00 !important;
@@ -130,10 +130,12 @@
 #wf-introduce .introduce-content .row .text{
     padding: 8px 0 0 0;
 }
-#wf-introduce .introduce-content .row .text p:last-of-type strong{
+#wf-introduce .introduce-content .row .text p:last-of-type a{
     color: #fe9b00;
     cursor: pointer;
     font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
 }
 #wf-introduce .introduce-content .ecarousel-innr .carousel-caption{
     color: black;
@@ -178,7 +180,10 @@
     border: .05rem solid white;
     border-radius: 1px;
     margin-left: 50px;
+}
+#wf-business .business-bottom button a{
     color: white;
+   text-decoration: none;
 }
 #wf-business .business-bottom .business_span span{
 	text-shadow: 2px 3px 0 #f17531;

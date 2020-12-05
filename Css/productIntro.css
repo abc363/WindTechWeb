@@ -21,8 +21,9 @@ div.col-8 div {
     height: auto;    
 }
 .productIntro-head .container .row .col-md-4{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
 }
 .productIntro-footer .container .row .img-mini{
     height: auto;
@@ -101,7 +102,7 @@ div.col-8 div {
 #wf-productInfo .info-photo .container .row .col-md-3{
     display: flex;
     justify-content: center;
-    height: 800px;
+    height: 500px;
 }
 #wf-productInfo .info-photo .container .row .col-md-3 .list-group a{
     padding: 0.3rem 1.2rem;
@@ -112,10 +113,7 @@ div.col-8 div {
     background-color: #fe9b00 !important;
     border-color: #fe9b00 !important;
 }
-/* #wf-productInfo .info-photo .container .row .scrollspy-example{
-    height: 650px;
-    overflow-y: auto;
-} */
+
 #wf-productInfo .info-photo .container .row .col-md-9 #list-scroll p{
     font-size: 18px;
     font-weight: 600;
@@ -125,10 +123,7 @@ div.col-8 div {
     color: white;
     border-radius: 4px;
 }
-/* #wf-productInfo .info-photo .container .row .col-md-9 #list-scroll p:first-of-type{
-    margin-bottom: 10px !important;
-    margin-top: 0 !important;
-} */
+
 .modal .modal-dialog .modal-body img{
     width: 100%;
     height: auto;
@@ -149,4 +144,21 @@ div.col-8 div {
     font-size: inherit;
     padding: initial;
     margin: inherit;
+}
+.topBar{
+    width: 1rem;
+    height: 1rem;
+    background-color: #fe9b00;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.topBar img{
+    width: 50%;
+    height: 50%;
 }

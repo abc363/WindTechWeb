@@ -50,7 +50,7 @@ function showProductByid(pid){
                 }
                 document.getElementById('row-mini').innerHTML = function(){
                     var arrMini = [];
-                    Object.keys(objTitle).forEach(item=>{
+                    Object.keys(objTitle).forEach(function(item){
                         const template = '<div class="col-md-2"><img src="'+data[item]+'" class="img-mini">'+
                         '<div class="img-hover" data-toggle="modal" data-target="#exampleModal" onclick="clickModel(\''+objTitle[item]+'\',\''+data[item]+'\')">点击放大查看</div></div>'
                         arrMini.push(template);
@@ -59,7 +59,7 @@ function showProductByid(pid){
                 }();
                 document.getElementById("list-example").innerHTML = function(){
                     var arr = [];
-                    Object.keys(objTitle).forEach((item,index)=>{
+                    Object.keys(objTitle).forEach(function(item,index){
                         const isActive = index === 0 ? 'active': '';
                         const template = '<a class="list-group-item list-group-item-action '+isActive+'" href="#list-item-'+index+'">'+objTitle[item]+'图</a>'
                         arr.push(template);
@@ -68,7 +68,7 @@ function showProductByid(pid){
                 }();
                 document.getElementById("list-scroll").innerHTML = function(){
                     var arrScroll = [];
-                    Object.keys(objTitle).forEach((item,index)=>{
+                    Object.keys(objTitle).forEach(function(item,index){
                         const template = '<p id="list-item-'+index+'">'+objTitle[item]+'图</p>'+
                         '<img src="'+data[item]+'" alt="微风科技'+data.pro_Name+objTitle[item]+'图"/>'
                         arrScroll.push(template);
