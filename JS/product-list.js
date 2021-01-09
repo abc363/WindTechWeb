@@ -1,4 +1,4 @@
-var ServerHost="http://120.55.95.122:8080";
+var ServerHost="http://backend.windiiot.com";
 var pageSize=3;
 var isGetPag = false;
 var prevPage = 1;
@@ -54,6 +54,7 @@ function showProduct(currentPage){
                             'pro_driver':'',
                             'pro_finger':'',
                             'pro_video':'',
+                            'pro_manual':'',
                         }
                         Object.keys(obj).forEach(function(e){
                             if(item[e] == null || item[e] == ''){
@@ -76,6 +77,7 @@ function showProduct(currentPage){
                                             '<span onclick="downLoadFile(\''+item.pro_driver+'\')" style="display:'+obj.pro_driver+'">上位机配置工具</span>'+
                                             '<span  onclick="previewFile(\''+item.pro_file+'\')" style="display:'+obj.pro_file+'">技术参考手册</span>'+
                                             '<span onclick="previewFile(\''+item.pro_finger+'\')" style="display:'+obj.pro_finger+'">快速入门指南</span>'+
+                                            '<span onclick="previewFile(\''+item.pro_manual+'\')" style="display:'+obj.pro_manual+'">user manual</span>'+
                                             '<span>库存：'+item.pro_Num+'</span></div>'+
                                         '</div>'+
                                     '</div>'+

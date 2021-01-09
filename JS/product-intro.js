@@ -5,7 +5,7 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var pid = GetQueryString("pid");
-var ServerHost="http://120.55.95.122:8080";
+var ServerHost="http://backend.windiiot.com";
 showProductByid(pid);
 function showProductByid(pid){
     $.ajax({
@@ -26,6 +26,7 @@ function showProductByid(pid){
                     'pro_driver':'',
                     'pro_finger':'',
                     'pro_video':'',
+                    'pro_manual':'',
                 }
                 Object.keys(obj).forEach(function(e){
                     if(data[e] == null || data[e] == ''){
@@ -37,6 +38,7 @@ function showProductByid(pid){
                                 '<span onclick="downLoadFile(\''+data.pro_driver+'\')" style="display:'+obj.pro_driver+'">上位机配置工具</span>'+
                                 '<span onclick="previewFile(\''+data.pro_file+'\')" style="display:'+obj.pro_file+'">技术参考手册</span>'+
                                 '<span onclick="previewFile(\''+data.pro_finger+'\')" style="display:'+obj.pro_finger+'">快速入门指南</span>'+
+                                '<span onclick="previewFile(\''+data.pro_manual+'\')" style="display:'+obj.pro_manual+'">user manual</span>'+
                                 '<span>库存：'+data.pro_Num+'</span>'
                     return html;
                 }();
