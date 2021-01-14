@@ -1,11 +1,10 @@
 var ServerHost="http://backend.windiiot.com";
 var pageSize=3;
-var isGetPag = false;
 var prevPage = 1;
 var outCurrentPage = 1;
 var changeType = '';
 var total = 0;
-showProduct(1);
+showProduct(1,'',true);
 $.ajax({
     "async":false,
     "url":ServerHost+"/products/showType",
@@ -17,7 +16,7 @@ $.ajax({
             // 找出pro_Type的类别
             var arrLi = [];
             $.each(json.data, function(index,info){
-               var li = '<li onclick="showProduct(1,\''+info.pro_Type+'\')">'+info.pro_Type+'</li>'
+               var li = '<li onclick="showProduct(1,\''+info.pro_Type+'\',true)">'+info.pro_Type+'</li>'
                 arrLi.push(li);
             })
             document.getElementById('ul-title').innerHTML = arrLi.join('');
@@ -26,14 +25,13 @@ $.ajax({
         }
     }
 });
-function showProduct(currentPage){
-    var type = '';
+function showProduct(currentPage,type='',bol=false){
+    // var type = '';
     changeType = type;
     const url = type ?  ServerHost+'/products/search':
                         ServerHost+'/products/show?pageSize='+pageSize+'&startPage='+pageSize*(currentPage-1);
     const sendType = type ? 'POST':'GET';
     type && (document.getElementById('product-text-title').innerHTML = type);
-    type && (isGetPag = false);
     const sendData = type ? '{"pro_State":"","pro_Name":"","pro_Type":"'+type+'","pageSize":'+pageSize+',"startPage":'+pageSize*(currentPage-1)+'}':'';
     $.ajax({
         "async":false,
@@ -89,7 +87,7 @@ function showProduct(currentPage){
                     return arr.join('');
                 }();
                 total = Math.ceil(json.data.totalNum/pageSize);
-                if(isGetPag==false){
+                if(bol==true){
                     var pagArr = [];
                     document.getElementById('pagination').innerHTML = function(){
                         var panLi = '';
@@ -98,24 +96,23 @@ function showProduct(currentPage){
                                 panLi='<li class="page-item" id="prev">'+
                                     '<a class="page-link" tabindex="-1" aria-disabled="true" onclick="toPrev()">上一页</a>'+
                                 '</li><li class="page-item" id="liItem'+(i+1)+'">'+
-                                '<a class="page-link" onclick="showProduct('+(i+1)+','+changeType+')">'+(i+1)+'</a>'+
+                                '<a class="page-link" onclick="showProduct('+(i+1)+',\''+changeType+'\')">'+(i+1)+'</a>'+
                             '</li>';
                             }else if(i==total-1){
                                 panLi='<li class="page-item" id="liItem'+(i+1)+'">'+
-                            '<a class="page-link" onclick="showProduct('+(i+1)+','+changeType+')">'+(i+1)+'</a>'+
+                            '<a class="page-link" onclick="showProduct('+(i+1)+',\''+changeType+'\')">'+(i+1)+'</a>'+
                         '</li><li class="page-item" id="next">'+
                         '<a class="page-link" onclick="toNext()">下一页</a>'+
                     '</li>';
                             }else{
                                 panLi='<li class="page-item" id="liItem'+(i+1)+'">'+
-                                '<a class="page-link" onclick="showProduct('+(i+1)+','+changeType+')">'+(i+1)+'</a>'+
+                                '<a class="page-link" onclick="showProduct('+(i+1)+',\''+changeType+'\')">'+(i+1)+'</a>'+
                             '</li>'
                             }
                         pagArr.push(panLi);
                         }
                         return pagArr.join('');
                     }();
-                    isGetPag = true;
                 }
                 $('#liItem'+prevPage).removeClass('active');
                 $('#liItem'+currentPage).addClass('active');
@@ -150,7 +147,7 @@ function toMore(id){
     window.location.href="productIntro.html?pid="+id;
 }
 function showAllProduct(){
-    showProduct(1);
+    showProduct(1,'',true);
     document.getElementById('product-text-title').innerHTML = '全部产品';
 }
 function toPrev(){
