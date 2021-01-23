@@ -1,0 +1,122 @@
+/* ***公司介绍*** */
+#wf-background{
+    width: 100%;
+    height: 8rem;
+    background-image: url("../Image/try1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    margin-top:.9rem;
+}
+#wf-background .backShade{
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.2;
+    background-color:black;
+}
+#wf-background .backText{
+    color: white;
+    z-index: 999;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 190px;
+    margin: auto;
+}
+#wf-background .backText>p:first-of-type{
+    font-size: 1rem;
+    margin: 0;
+}
+#wf-background .backText>p:last-of-type{
+    margin: 0;
+    font-size: 0.4rem;
+}
+#wf-background .backText>p{
+    text-align: center;
+}
+#wf-newsIntro{
+    width:100%;
+    padding: 3% 0;
+    background-image: url("../Image/point.jpg");
+}
+#wf-newsIntro .news_bigTitle{
+    font-size:0.5rem;
+    border-bottom:2px solid #fe9b00;
+    width:100%;
+    font-weight:600;
+    color:#fe9b00;
+    text-align:center;
+}
+#wf-newsIntro .container .news_content #news_company_content li{
+   padding: 10px 0;
+   background-color: white;
+   margin: 20px 0;
+}
+#wf-newsIntro .container .news_content #news_industy_content li{
+    padding: 10px 0;
+    background-color: white;
+    margin: 20px 0;
+ }
+#wf-newsIntro .container .news_content .col-md-4 img{
+    width:100%;
+    height:4rem;
+}
+#wf-newsIntro .container .news_content .col-md-8 .news_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#wf-newsIntro .container .news_content .col-md-8 .news_title span:first-of-type{
+    font-weight:600;
+    font-size:0.35rem;
+}
+#wf-newsIntro .container .news_content .col-md-8 .news_title span:last-of-type{
+    color:#fe9b00;
+    font-size: 16px;
+}
+#wf-newsIntro .container .news_content p{
+   font-size: 16px;
+}
+#wf-newsIntro .container .news_content #news_company_content .col-md-8 .news_intro p:last-of-type{
+    color:#fe9b00;
+    font-weight: 600;
+    cursor: pointer;
+}
+#wf-newsIntro .container .news_content #news_industy_content .col-md-8 .news_intro p:last-of-type{
+    color:#fe9b00;
+    font-weight: 600;
+    cursor: pointer;
+}
+#wf-newsIntro .pagination{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#wf-newsIntro .pagination .page-link{
+    color:#fe9b00;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0.2rem !important;
+}
+#wf-newsIntro .pagination .page-item.disabled .page-link{
+    color:#6c757d;
+}
+#wf-newsIntro .pagination .page-item.active .page-link{
+    background-color: #fe9b00;
+    border-color: #fe9b00;
+    color: white;
+}
+#wf-newsIntro .pagination .page-item:last-child .page-link{
+    border-top-right-radius:0.1rem;
+    border-bottom-right-radius:0.1rem;
+}
+#wf-newsIntro .pagination .page-item:first-child .page-link{
+    border-top-left-radius:0.1rem;
+    border-bottom-left-radius:0.1rem;
+}

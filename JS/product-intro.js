@@ -38,7 +38,7 @@ function showProductByid(pid){
                                 '<span onclick="downLoadFile(\''+data.pro_driver+'\')" style="display:'+obj.pro_driver+'">上位机配置工具</span>'+
                                 '<span onclick="previewFile(\''+data.pro_file+'\')" style="display:'+obj.pro_file+'">技术参考手册</span>'+
                                 '<span onclick="previewFile(\''+data.pro_finger+'\')" style="display:'+obj.pro_finger+'">快速入门指南</span>'+
-                                '<span onclick="previewFile(\''+data.pro_manual+'\')" style="display:'+obj.pro_manual+'">user manual</span>'+
+                                '<span onclick="previewFile(\''+data.pro_manual+'\')" style="display:'+obj.pro_manual+'">User Manual</span>'+
                                 '<span>库存：'+data.pro_Num+'</span>'
                     return html;
                 }();

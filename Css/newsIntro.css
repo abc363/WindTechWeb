@@ -1,0 +1,64 @@
+/* ***公司介绍*** */
+#wf-background{
+    width: 100%;
+    height: 8rem;
+    background-image: url("../Image/try1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    margin-top:.9rem;
+}
+#wf-background .backShade{
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    bottom: 0;
+    opacity: 0.2;
+    background-color:black;
+}
+#wf-background .backText{
+    color: white;
+    z-index: 999;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 190px;
+    margin: auto;
+}
+#wf-background .backText>p:first-of-type{
+    font-size: 1rem;
+    margin: 0;
+}
+#wf-background .backText>p:last-of-type{
+    margin: 0;
+    font-size: 0.4rem;
+}
+#wf-background .backText>p{
+    text-align: center;
+}
+#wf-newsIntroContent{
+    width:100%;
+    padding: 3% 0;
+    background-image: url("../Image/point.jpg");
+}
+#wf-newsIntroContent .newsIntroText{
+    width: 80%;
+    margin: auto;
+    font-size: 16px;
+}
+#wf-newsIntroContent .newsIntroText img{
+    width: 50%;
+    margin: 0 25%;
+}
+h1{
+    font-size: 0.55rem !important;
+    font-weight: 600;
+}
+h2{
+    font-size: 0.4rem !important;
+    font-weight: 600;
+
+}
