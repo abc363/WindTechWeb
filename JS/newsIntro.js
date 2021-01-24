@@ -6,7 +6,7 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var nid = GetQueryString("nid");
-var ServerHost="http://120.55.95.122:8080";
+var ServerHost="http://backend.windiiot.com";
 // 获取新闻信息
 $.ajax({
     "async":false,

@@ -1,4 +1,4 @@
-var ServerHost="http://120.55.95.122:8080";
+var ServerHost="http://backend.windiiot.com";
 // 放两条数据
 var pageSize=2;
 // 公司新闻前点击页
