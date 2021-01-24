@@ -1,3 +1,4 @@
+// tab页切换
 function chooseType(type,btnType,other){
     var obj =$('#'+type);
     obj.css("display","block");
@@ -9,6 +10,7 @@ function chooseType(type,btnType,other){
     btnObj.css("borderBottomColor","#f17531");
     otherObj.css("borderBottomColor","#A9A9A9");
 }
+// 获取url中的参数
 function GetQueryString(name)
 {
      var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");

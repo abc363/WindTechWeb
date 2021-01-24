@@ -19,8 +19,6 @@ function showProductByid(pid){
                 document.getElementById('info-title').innerHTML = data.pro_Name+'（'+data.pro_Type+'）';
                 document.getElementById('info-intro').innerHTML = data.pro_info;
                 document.getElementById('productIntroPhoto').innerHTML = '<img src="'+data.pro_fontTiltOne+'"/>';
-               
-
                 const obj ={
                     'pro_file':'',
                     'pro_driver':'',
@@ -33,6 +31,7 @@ function showProductByid(pid){
                         obj[e] = 'none';
                     }
                 })
+                // 附件
                 document.getElementById('info-file').innerHTML = function(){
                     const html = '<span onclick="previewFile(\''+data.pro_video+'\')" style="display:'+obj.pro_video+'">演示视频</span>'+
                                 '<span onclick="downLoadFile(\''+data.pro_driver+'\')" style="display:'+obj.pro_driver+'">上位机配置工具</span>'+
@@ -50,6 +49,7 @@ function showProductByid(pid){
                     'pro_font':'正面',
                     'pro_back':'背面',
                 }
+                // 平铺的几张图片点击后弹出弹框
                 document.getElementById('row-mini').innerHTML = function(){
                     var arrMini = [];
                     Object.keys(objTitle).forEach(function(item){
@@ -59,6 +59,7 @@ function showProductByid(pid){
                     })
                     return arrMini.join("");
                 }();
+                // 左侧滚动的菜单
                 document.getElementById("list-example").innerHTML = function(){
                     var arr = [];
                     Object.keys(objTitle).forEach(function(item,index){
@@ -68,6 +69,7 @@ function showProductByid(pid){
                     })
                     return arr.join("");                    
                 }();
+                // 下面滚动的几张图
                 document.getElementById("list-scroll").innerHTML = function(){
                     var arrScroll = [];
                     Object.keys(objTitle).forEach(function(item,index){
@@ -83,13 +85,16 @@ function showProductByid(pid){
         }
     })
 }
+// 点击弹出弹框
     function clickModel(title,url) {
         document.getElementById("exampleModalLabel").innerHTML = title+'图';
         document.getElementById("modal-image").src = url;
     }
+    // 预览文件
 function previewFile(url){
     window.open(url);
 }
+// 下载文件
 function downLoadFile(url){
     const fileArr = url.split("/");
     const filePath = fileArr[3]+"/"+fileArr[4]+"/"+fileArr[5]+"/"+fileArr[6];

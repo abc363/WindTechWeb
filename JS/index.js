@@ -12,6 +12,7 @@ const heading=document.querySelector('.business_span');
 function toMore(type){
     window.location.href = type+'.html';
 }
+// 主页四个产品特点hover
 var img0=document.getElementById("logo_image0");
 var img1=document.getElementById("logo_image1");
 var img2=document.getElementById("logo_image2");

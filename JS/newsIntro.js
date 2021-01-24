@@ -1,3 +1,4 @@
+// 获取url参数
 function GetQueryString(name)
 {
      var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
@@ -6,6 +7,7 @@ function GetQueryString(name)
 }
 var nid = GetQueryString("nid");
 var ServerHost="http://120.55.95.122:8080";
+// 获取新闻信息
 $.ajax({
     "async":false,
     "url":ServerHost+'/news/'+nid+'/showNews',

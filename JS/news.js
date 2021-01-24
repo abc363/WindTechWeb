@@ -1,8 +1,13 @@
 var ServerHost="http://120.55.95.122:8080";
+// 放两条数据
 var pageSize=2;
+// 公司新闻前点击页
 var companyPrevPage = 1;
+// 行业动态前点击页
 var industyPrevPage = 1;
+// 公司新闻当前页
 var companyCurrentPage = 1;
+// 行业动态当前页
 var industyCurrentPage = 1;
 var changeType = '';
 var companyTotal = 0;
@@ -27,6 +32,7 @@ function showProduct(curPage,newsType){
             if(json.state == 200){
                 var thisData=json.data.tableData;
                 const newsId = newsType==='1'?'news_company_content':'news_industy_content';
+                // 渲染不同的新闻数据
                 document.getElementById(newsId).innerHTML = function(){
                     var arr = [];
                     $.each(thisData, function(index, item){
@@ -58,6 +64,7 @@ function showProduct(curPage,newsType){
                     const typeText = newsType==='1'?'company':'industy';
                     document.getElementById(pagId).innerHTML = function(){
                     var panLi = '';
+                    // 分页按钮
                     for(let i=0;i<total;i++){
                         if(i==0){
                             panLi='<li class="page-item" id="prev_'+typeText+'">'+
@@ -80,8 +87,7 @@ function showProduct(curPage,newsType){
                     }
                     return pagArr.join('');
                 }();
-                // const prevPage = newsType==='1'?companyPrevPage:industyPrevPage;
-                // $('#liItem_'+typeText+prevPage).removeClass('active');
+                // 分页按钮样式
                 if(newsType === '1'){
                     companyCurrentPage = companyPrevPage = currentPage;
                     $('#liItem_'+typeText+companyPrevPage).removeClass('active');
@@ -111,6 +117,7 @@ function showProduct(curPage,newsType){
 function toMore(id){
     window.location.href="newsIntro.html?nid="+id;
 }
+// 上一页
 function toPrev(newsType){
     if(newsType === '1'){
         if(companyCurrentPage==1){
@@ -125,8 +132,8 @@ function toPrev(newsType){
             showProduct(industyCurrentPage-1,newsType);
         }
     }
-   
 }
+// 下一页
 function toNext(newsType){
     console.log(typeof newsType);
     if(newsType === '1'){

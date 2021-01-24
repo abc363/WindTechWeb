@@ -125,9 +125,13 @@
     #wf-footer .row .col-md-8 p{
         margin: 2px 0;
     }
-    /* #wf-productInfo #info-title{
-        font-size: .45rem;
-    } */
+    #wf-newsIntro .container .news_content .col-md-8 .news_title span:first-of-type{
+        font-size:0.4rem;
+    }
+    #wf-newsIntroContent .newsIntroText img{
+        width: 100%;
+        margin: 0;
+    }
 }
 @media only screen and (max-width: 560px) {
 	

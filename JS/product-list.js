@@ -1,10 +1,12 @@
 var ServerHost="http://backend.windiiot.com";
+// 一页放多少条
 var pageSize=3;
 var prevPage = 1;
 var outCurrentPage = 1;
 var changeType = '';
 var total = 0;
 showProduct(1,'',true);
+// 刚开始就请求拿到type的类别
 $.ajax({
     "async":false,
     "url":ServerHost+"/products/showType",
@@ -25,9 +27,10 @@ $.ajax({
         }
     }
 });
+// 展示产品数据
 function showProduct(currentPage,type='',bol=false){
-    // var type = '';
     changeType = type;
+    // search是点击类别，其他是展示全部产品
     const url = type ?  ServerHost+'/products/search':
                         ServerHost+'/products/show?pageSize='+pageSize+'&startPage='+pageSize*(currentPage-1);
     const sendType = type ? 'POST':'GET';
@@ -44,6 +47,7 @@ function showProduct(currentPage,type='',bol=false){
         "success":function(json){
             if(json.state == 200){
                 var thisData=json.data.tableData;
+                // 渲染数据
                 document.getElementById('product_list_ul').innerHTML = function(){
                     var arr = [];
                     $.each(thisData, function(index, item){
@@ -54,6 +58,7 @@ function showProduct(currentPage,type='',bol=false){
                             'pro_video':'',
                             'pro_manual':'',
                         }
+                        // 文件文字是否显示，显示就是有该文件
                         Object.keys(obj).forEach(function(e){
                             if(item[e] == null || item[e] == ''){
                                 obj[e] = 'none';
@@ -89,6 +94,7 @@ function showProduct(currentPage,type='',bol=false){
                 total = Math.ceil(json.data.totalNum/pageSize);
                 if(bol==true){
                     var pagArr = [];
+                    // 分页按钮渲染
                     document.getElementById('pagination').innerHTML = function(){
                         var panLi = '';
                         for(let i=0;i<total;i++){
@@ -114,6 +120,7 @@ function showProduct(currentPage,type='',bol=false){
                         return pagArr.join('');
                     }();
                 }
+                // 分页按钮样式
                 $('#liItem'+prevPage).removeClass('active');
                 $('#liItem'+currentPage).addClass('active');
                 outCurrentPage = prevPage = currentPage;
@@ -134,10 +141,11 @@ function showProduct(currentPage,type='',bol=false){
         }
     });
 }
-
+// 预览文件
 function previewFile(url){
     window.open(url);
 }
+// 下载文件
 function downLoadFile(url){
     const fileArr = url.split("/");
     const filePath = fileArr[3]+"/"+fileArr[4]+"/"+fileArr[5]+"/"+fileArr[6];
@@ -146,10 +154,12 @@ function downLoadFile(url){
 function toMore(id){
     window.location.href="productIntro.html?pid="+id;
 }
+// 展示全部产品
 function showAllProduct(){
     showProduct(1,'',true);
     document.getElementById('product-text-title').innerHTML = '全部产品';
 }
+// 上一页
 function toPrev(){
     if(outCurrentPage==1){
         return;
@@ -157,6 +167,7 @@ function toPrev(){
         showProduct(outCurrentPage-1,changeType);
     }
 }
+// 下一页
 function toNext(){
     if(outCurrentPage==total){
         return;
