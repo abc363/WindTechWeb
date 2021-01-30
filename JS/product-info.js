@@ -5,7 +5,6 @@ function GetQueryString(name)
      if(r!=null)return  unescape(r[2]); return null;
 }
 var pid = GetQueryString("pid");
-var ServerHost="http://backend.windiiot.com";
 showProductByid(pid);
 function showProductByid(pid){
     $.ajax({

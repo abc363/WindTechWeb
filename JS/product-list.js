@@ -1,4 +1,3 @@
-var ServerHost="http://backend.windiiot.com";
 // 一页放多少条
 var pageSize=3;
 var prevPage = 1;
